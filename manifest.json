@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+
+  "name": "skipAmazonPrimeTeasers",
+  "version": "0.1.0",
+  "description": "skip Amazon Prime movie teasers",
+  
+  "content_scripts": [{
+    "js": ["main.js"],
+    "matches": ["https://www.amazon.co.jp/gp/video/*", "https://www.amazon.co.jp/*/dp/*"]
+  }]
+}
