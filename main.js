@@ -10,6 +10,12 @@ const callback = (mutationList, observer) => {
       }
     }
   }
+
+  const nextCardHideButton = document.querySelector('button.atvwebplayersdk-nextupcardhide-button');
+  if (nextCardHideButton) {
+    console.log('hide next card :P');
+    nextCardHideButton.click();
+  }
 };
 const observer = new MutationObserver(callback);
 observer.observe(document.body, { childList: true, subtree: true });
