@@ -5,7 +5,7 @@ const callback = (mutationList, observer) => {
       for (const button of buttons) {
         if (button.innerText === 'スキップ') {
           console.log('skipping teaser :P');
-          window.setTimeout(() => button.click(), 1000);
+          window.setTimeout(() => button.click(), 100);
         }
       }
     }
