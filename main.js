@@ -4,8 +4,13 @@ const callback = (mutationList, observer) => {
     if (buttons) {
       for (const button of buttons) {
         if (button.innerText === 'スキップ') {
-          console.log('skipping teaser :P');
-          window.setTimeout(() => button.click(), 100);
+          button.innerText = '*スキップ*';
+          window.setTimeout(() => {
+            if (button.innerText === '*スキップ*') {
+              console.log('skipping teaser :P');
+              button.click();
+            }
+          }, 500);
         }
       }
     }
